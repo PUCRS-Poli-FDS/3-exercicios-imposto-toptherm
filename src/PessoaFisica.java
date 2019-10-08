@@ -24,6 +24,4 @@ public class PessoaFisica{
         this.rendimentoTotal = rendimentoTotal;
     }
 
-    
-
 }
