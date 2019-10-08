@@ -1,4 +1,4 @@
-public static class CalculaImpostoSimplificado{ //simplificado
+public static class CalculaImpostoCompleto{ //completo
     public static float aplicaImpostoSimplificado(float baseCalculo){
         if baseCalculo < 0 throw Exception();
         else if baseCalculo <= 12000 return baseCalculo;

@@ -5,6 +5,4 @@ public static class CalculaImpostoSimplificado{ //simplificado
         else if baseCalculo > 12000 && baseCalculo < 24000 return baseCalculo * 1.15
         else return baseCalculo * 1.27; 
     }
-
-    public static 
 }
