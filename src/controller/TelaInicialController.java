@@ -1,38 +1,48 @@
-import java.io.FileInputStream;
-import java.io.IOException;
+package controller;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class TextAreaExample extends Application
+import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
+
+public class TelaInicialController extends Application
 {
-//    public static void main(String[] args)
-//    {
-//        Application.launch(args);
-//    }
+
+    @FXML
+    private TextField nome;
+
+    @FXML
+    private TextField CPF;
+
+    @FXML
+    private TextField idade;
+
+    @FXML
+    private TextField numeroDependentes;
+
+    @FXML
+    private TextField contribuicaoOficial;
+
+    @FXML
+    private TextField rendimentoTotal;
 
     @Override
-    public void start(Stage stage) throws IOException
-    {
-        // Create the FXMLLoader
-        FXMLLoader loader = new FXMLLoader();
-        // Path to the FXML File
-        String fxmlDocPath = "Path-To-Your-FXML-Files/TextAreaExample.fxml";
-        FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
-
-        // Create the Pane and all Details
-        AnchorPane root = (AnchorPane) loader.load(fxmlStream);
-
-        // Create the Scene
-        Scene scene = new Scene(root);
-        // Set the Scene to the Stage
-        stage.setScene(scene);
-        // Set the Title to the Stage
-        stage.setTitle("A SceneBuilder Example");
-        // Display the Stage
+    public void start(Stage stage) throws IOException {
+        URL resource = getClass().getClassLoader().getResource("/fxml/telaCadastro.fxml");
+        URL arquivoFXML = resource;
+        Parent fxmlParent = FXMLLoader.load(arquivoFXML);
+        stage.setScene(new Scene(fxmlParent, 300, 100));
+        stage.setTitle("Olá mundo com FXML");
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }
