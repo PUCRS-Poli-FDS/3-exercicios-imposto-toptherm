@@ -1,8 +1,8 @@
-package dto;
+package com.fsd.dto;
 
 import java.math.BigDecimal;
 
-public class PessoaFisica{
+public class PessoaFisica {
     private String nome;
     private String CPF;
     private Integer idade;
@@ -10,17 +10,18 @@ public class PessoaFisica{
     private BigDecimal contribuicaoOficial;
     private BigDecimal rendimentoTotal;
 
-
-    public PessoaFisica(String nome, String CPF, int idade){
+    public PessoaFisica(String nome, String CPF, BigDecimal contribuicaoOficial, BigDecimal rendimentoTotal) {
         this.nome = nome;
         this.CPF = CPF;
-        this.idade = idade;
+        this.contribuicaoOficial = contribuicaoOficial;
+        this.rendimentoTotal = rendimentoTotal;
     }
 
-    public PessoaFisica(String nome, String CPF, int idade, BigDecimal contribuicaoOficial, BigDecimal rendimentoTotal){
+    public PessoaFisica(String nome, String CPF, Integer idade, Integer dependentes, BigDecimal contribuicaoOficial, BigDecimal rendimentoTotal) {
         this.nome = nome;
         this.CPF = CPF;
         this.idade = idade;
+        this.dependentes = dependentes;
         this.contribuicaoOficial = contribuicaoOficial;
         this.rendimentoTotal = rendimentoTotal;
     }

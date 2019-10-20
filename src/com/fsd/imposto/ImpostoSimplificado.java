@@ -1,4 +1,4 @@
-package imposto;
+package com.fsd.imposto;
 
 import java.math.BigDecimal;
 
