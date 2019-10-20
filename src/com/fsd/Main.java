@@ -11,16 +11,16 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        File f = new File("src/com/fsd/fxml/telaCadastro.fxml");
-        Parent fxmlParent = FXMLLoader.load(f.toURI().toURL());
+	@Override
+	public void start(Stage stage) throws IOException {
+		File f = new File("src/com/fsd/fxml/telaCadastro.fxml");
+		Parent fxmlParent = FXMLLoader.load(f.toURI().toURL());
 
-        stage.setScene(new Scene(fxmlParent, 700, 400));
-        stage.show();
-    }
+		stage.setScene(new Scene(fxmlParent, 700, 400));
+		stage.show();
+	}
 
-    public static void main(String[] args) {
-        launch();
-    }
+	public static void main(String[] args) {
+		launch();
+	}
 }
